@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Enigme 5</title>
+
+  <!-- CSS  -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+</head>
+<body>
+  <nav class="nav_color" role="navigation">
+    <div class="nav-wrapper">
+        Enigme n°5 - Les allumettes
+    </div>
+  </nav>
+
+  <div class="section no-pad-bot">
+    <div class="container">
+      <h1 class="header center title_color">Encore un petit effort</h1>
+      <div class="row center">
+        <h4 class="header col s12 light">Tu montes à l'échelle et tu aperçois la tour du fort. Le Père Fouras est en train de faire des incantations avant de mettre le feu au fort. La porte est fermée par un code.</h4>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container">
+    <div class="section">
+
+      <!--   Icon Section   -->
+      <div class="row">
+        <div class = "center col m12">
+          <div class = "card card_color">
+            <div class = "card-content">
+            <span class = "card-title white-text"><h3>Enigme n°5</h3></span>
+            <div class = "Parallax center"><img src = "enigme_allumettes.JPG" alt = "" height = "300px" width = "500px"></div>
+            <h5>Quel est le nombre le plus élevé que tu puisses faire en ne bougeant que deux allumettes ?</h5>
+          </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer class="page-footer nav_color">
+    <div class="container">
+      <div class="row">
+        <h4>Ta réponse :</h4>
+        <form>
+          <label><input class = 'col m4 s4 center' type = 'number' id = 'test' /></label><br><br><br>
+          <div class ='btn-large' onclick="redirection()">Valider</div>
+        </form>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      Made by Vos Chefs
+      </div>
+    </div>
+  </footer>
+
+
+  <!--  Scripts-->
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script>
+    var answer = 999;
+    var test = 0;
+
+    function redirection(){
+      delete(test)
+
+      var test = document.getElementById('test').value;
+      console.log(test)
+      if(test == answer){
+        console.log('ça marche')
+        location.assign('enigme_logique.html');
+      } else {
+        location.assign('Erreur.html');
+      };
+}
+
+  </script>
+
+  </body>
+</html>
